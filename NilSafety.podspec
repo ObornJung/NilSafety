@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/ObornJung/NilSafety.git", :tag => s.version }
 
-  s.source_files  = "NilSafety/**/*.(m,h)"
+  s.source_files  = "NilSafety/**/*.{m,h}"
   s.public_header_files = 'NilSafety/**/*.h'
    
   s.frameworks  = "Foundation", "UIKit"
