@@ -20,8 +20,10 @@ Pod::Spec.new do |s|
   s.source_files  = "NilSafety/**/*.{m,h}"
   s.public_header_files = 'NilSafety/**/*.h'
    
-  s.frameworks  = "Foundation", "UIKit", "swizzleMethod"
+  s.frameworks  = "Foundation", "UIKit"
 
   s.requires_arc = true
+
+  s.dependency 'swizzleMethod'
 
 end
