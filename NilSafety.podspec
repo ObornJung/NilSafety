@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "NilSafety"
-  s.version      = "1.0"
+  s.version      = "1.0.0"
   s.summary      = "How we made NSArray、NSMutableArray、NSDictionary、NSMutableDictionary nil safe at Glow."
 
   s.description      = <<-DESC
