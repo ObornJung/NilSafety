@@ -1,0 +1,10 @@
+PODS:
+  - swizzleMethod (1.0.0)
+
+DEPENDENCIES:
+  - swizzleMethod
+
+SPEC CHECKSUMS:
+  swizzleMethod: 5b27ff0552d12b67637871ad492fe0995950c866
+
+COCOAPODS: 0.39.0

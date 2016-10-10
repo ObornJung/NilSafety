@@ -17,9 +17,9 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class cls = NSClassFromString(@"__NSPlaceholderDictionary");
-        [cls ns_swizzleMethod:@selector(initWithObjects:forKeys:count:)
+        [cls sm_swizzleMethod:@selector(initWithObjects:forKeys:count:)
                    withMethod:@selector(ns_initWithObjects:forKeys:count:)];
-        [self ns_swizzleClassMethod:@selector(dictionaryWithObjects:forKeys:count:)
+        [self sm_swizzleClassMethod:@selector(dictionaryWithObjects:forKeys:count:)
                          withMethod:@selector(ns_dictionaryWithObjects:forKeys:count:)];
     });
 }
@@ -82,11 +82,11 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class class = NSClassFromString(@"__NSDictionaryM");
-        [class ns_swizzleMethod:@selector(setObject:forKey:)
+        [class sm_swizzleMethod:@selector(setObject:forKey:)
                      withMethod:@selector(ns_setObject:forKey:)];
-        [class ns_swizzleMethod:@selector(removeObjectForKey:)
+        [class sm_swizzleMethod:@selector(removeObjectForKey:)
                      withMethod:@selector(ns_removeObjectForKey:)];
-        [class ns_swizzleMethod:@selector(setObject:forKeyedSubscript:)
+        [class sm_swizzleMethod:@selector(setObject:forKeyedSubscript:)
                      withMethod:@selector(ns_setObject:forKeyedSubscript:)];
     });
 }

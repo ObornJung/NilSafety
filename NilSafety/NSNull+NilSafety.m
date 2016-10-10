@@ -16,9 +16,9 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self ns_swizzleMethod:@selector(methodSignatureForSelector:)
+        [self sm_swizzleMethod:@selector(methodSignatureForSelector:)
                     withMethod:@selector(ns_methodSignatureForSelector:)];
-        [self ns_swizzleMethod:@selector(forwardInvocation:)
+        [self sm_swizzleMethod:@selector(forwardInvocation:)
                     withMethod:@selector(ns_forwardInvocation:)];
     });
 }

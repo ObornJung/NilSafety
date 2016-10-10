@@ -22,13 +22,13 @@ static inline BOOL IOS_9_OR_LATER() {
     dispatch_once(&onceToken, ^{
         if (IOS_9_OR_LATER()) {
             Class clsI = NSClassFromString(@"__NSArrayI");
-            [clsI ns_swizzleMethod:@selector(objectAtIndex:)
+            [clsI sm_swizzleMethod:@selector(objectAtIndex:)
                        withMethod:@selector(ns_objectAtIndex:)];
         }
         Class clsP = NSClassFromString(@"__NSPlaceholderArray");
-        [clsP ns_swizzleMethod:@selector(initWithObjects:count:)
+        [clsP sm_swizzleMethod:@selector(initWithObjects:count:)
                    withMethod:@selector(ns_initWithObjects:count:)];
-        [self ns_swizzleClassMethod:@selector(arrayWithObjects:count:)
+        [self sm_swizzleClassMethod:@selector(arrayWithObjects:count:)
                          withMethod:@selector(ns_arrayWithObjects:count:)];
         
     });
@@ -87,17 +87,17 @@ static inline BOOL IOS_9_OR_LATER() {
     dispatch_once(&onceToken, ^{
         Class arrayCls = NSClassFromString(@"__NSArrayM");
         if (IOS_9_OR_LATER()) {
-            [arrayCls ns_swizzleMethod:@selector(objectAtIndex:)
+            [arrayCls sm_swizzleMethod:@selector(objectAtIndex:)
                             withMethod:@selector(ns_objectAtIndex:)];
         }
         
-        [arrayCls ns_swizzleMethod:@selector(removeObjectAtIndex:)
+        [arrayCls sm_swizzleMethod:@selector(removeObjectAtIndex:)
                         withMethod:@selector(ns_removeObjectAtIndex:)];
-        [arrayCls ns_swizzleMethod:@selector(insertObject:atIndex:)
+        [arrayCls sm_swizzleMethod:@selector(insertObject:atIndex:)
                         withMethod:@selector(ns_insertObject:atIndex:)];
-        [arrayCls ns_swizzleMethod:@selector(setObject:atIndexedSubscript:)
+        [arrayCls sm_swizzleMethod:@selector(setObject:atIndexedSubscript:)
                         withMethod:@selector(ns_setObject:atIndexedSubscript:)];
-        [arrayCls ns_swizzleMethod:@selector(replaceObjectAtIndex:withObject:)
+        [arrayCls sm_swizzleMethod:@selector(replaceObjectAtIndex:withObject:)
                         withMethod:@selector(ns_replaceObjectAtIndex:withObject:)];
     });
 }
