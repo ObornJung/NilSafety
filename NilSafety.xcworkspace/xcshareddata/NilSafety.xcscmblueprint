@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9420BB76F757F0D3C530DF30BE016AB5772BB58A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9420BB76F757F0D3C530DF30BE016AB5772BB58A" : 9223372036854775807,
+    "7ADD4EA74211FAB6806155C2B416D86121E7A395" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AA390023-FCA2-47B6-AFCE-11DD804244B0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9420BB76F757F0D3C530DF30BE016AB5772BB58A" : "NilSafety\/",
+    "7ADD4EA74211FAB6806155C2B416D86121E7A395" : "swizzleMethod\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NilSafety",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NilSafety.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ObornJung\/swizzleMethod.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7ADD4EA74211FAB6806155C2B416D86121E7A395"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ObornJung\/NilSafety.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9420BB76F757F0D3C530DF30BE016AB5772BB58A"
+    }
+  ]
+}

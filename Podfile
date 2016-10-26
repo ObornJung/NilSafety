@@ -8,7 +8,7 @@ source "https://github.com/CocoaPods/Specs.git"
 
 target 'NilSafety' do
 
-pod 'swizzleMethod'
+    pod 'swizzleMethod'
 
 end
 
