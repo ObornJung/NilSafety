@@ -22,7 +22,8 @@ Pod::Spec.new do |s|
    
   s.frameworks  = "Foundation", "UIKit"
 
-  s.requires_arc = true
+  s.requires_arc = false
+  s.requires_arc = ['NilSafety/ARC/**/*.m', 'NilSafety/ARC/**/*.m']
 
   s.dependency 'swizzleMethod'
 

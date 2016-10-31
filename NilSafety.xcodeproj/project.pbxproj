@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		3772506F1DAA4B5300C4A4EF /* NilSafety.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377250651DAA4B5300C4A4EF /* NilSafety.framework */; };
 		377250741DAA4B5300C4A4EF /* NilSafetyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 377250731DAA4B5300C4A4EF /* NilSafetyTests.m */; };
-		377250871DAA4BB900C4A4EF /* NilSafetyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3772507F1DAA4BB900C4A4EF /* NilSafetyManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		377250881DAA4BB900C4A4EF /* NilSafetyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 377250801DAA4BB900C4A4EF /* NilSafetyManager.m */; };
-		377250891DAA4BB900C4A4EF /* NSArray+NilSafety.h in Headers */ = {isa = PBXBuildFile; fileRef = 377250811DAA4BB900C4A4EF /* NSArray+NilSafety.h */; };
-		3772508A1DAA4BB900C4A4EF /* NSArray+NilSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = 377250821DAA4BB900C4A4EF /* NSArray+NilSafety.m */; };
-		3772508B1DAA4BB900C4A4EF /* NSDictionary+NilSafety.h in Headers */ = {isa = PBXBuildFile; fileRef = 377250831DAA4BB900C4A4EF /* NSDictionary+NilSafety.h */; };
-		3772508C1DAA4BB900C4A4EF /* NSDictionary+NilSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = 377250841DAA4BB900C4A4EF /* NSDictionary+NilSafety.m */; };
-		3772508D1DAA4BB900C4A4EF /* NSNull+NilSafety.h in Headers */ = {isa = PBXBuildFile; fileRef = 377250851DAA4BB900C4A4EF /* NSNull+NilSafety.h */; };
-		3772508E1DAA4BB900C4A4EF /* NSNull+NilSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = 377250861DAA4BB900C4A4EF /* NSNull+NilSafety.m */; };
-		377250E31DAB7E8000C4A4EF /* NilSafety.h in Headers */ = {isa = PBXBuildFile; fileRef = 377250E21DAB7E8000C4A4EF /* NilSafety.h */; };
+		378E69671DC34DE200C60EFC /* NilSafety.h in Headers */ = {isa = PBXBuildFile; fileRef = 378E695E1DC34DE200C60EFC /* NilSafety.h */; };
+		378E69681DC34DE200C60EFC /* NilSafetyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 378E695F1DC34DE200C60EFC /* NilSafetyManager.h */; };
+		378E69691DC34DE200C60EFC /* NilSafetyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E69601DC34DE200C60EFC /* NilSafetyManager.m */; };
+		378E696A1DC34DE200C60EFC /* NSArray+NilSafety.h in Headers */ = {isa = PBXBuildFile; fileRef = 378E69611DC34DE200C60EFC /* NSArray+NilSafety.h */; };
+		378E696B1DC34DE200C60EFC /* NSArray+NilSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E69621DC34DE200C60EFC /* NSArray+NilSafety.m */; };
+		378E696C1DC34DE200C60EFC /* NSDictionary+NilSafety.h in Headers */ = {isa = PBXBuildFile; fileRef = 378E69631DC34DE200C60EFC /* NSDictionary+NilSafety.h */; };
+		378E696D1DC34DE200C60EFC /* NSDictionary+NilSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E69641DC34DE200C60EFC /* NSDictionary+NilSafety.m */; };
+		378E696E1DC34DE200C60EFC /* NSNull+NilSafety.h in Headers */ = {isa = PBXBuildFile; fileRef = 378E69651DC34DE200C60EFC /* NSNull+NilSafety.h */; };
+		378E696F1DC34DE200C60EFC /* NSNull+NilSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E69661DC34DE200C60EFC /* NSNull+NilSafety.m */; };
+		378E69721DC34DF100C60EFC /* NSArray+NilSafetyMRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 378E69701DC34DF100C60EFC /* NSArray+NilSafetyMRC.h */; };
+		378E69731DC34DF100C60EFC /* NSArray+NilSafetyMRC.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E69711DC34DF100C60EFC /* NSArray+NilSafetyMRC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		57D32453210C69607AC5D237 /* libPods-NilSafety.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F52AEE2077A18E4E3F26DCE9 /* libPods-NilSafety.a */; };
 /* End PBXBuildFile section */
 
@@ -37,15 +39,17 @@
 		3772506E1DAA4B5300C4A4EF /* NilSafetyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NilSafetyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		377250731DAA4B5300C4A4EF /* NilSafetyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NilSafetyTests.m; sourceTree = "<group>"; };
 		377250751DAA4B5300C4A4EF /* NilSafetyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NilSafetyTests-Info.plist"; sourceTree = "<group>"; };
-		3772507F1DAA4BB900C4A4EF /* NilSafetyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NilSafetyManager.h; sourceTree = "<group>"; };
-		377250801DAA4BB900C4A4EF /* NilSafetyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NilSafetyManager.m; sourceTree = "<group>"; };
-		377250811DAA4BB900C4A4EF /* NSArray+NilSafety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NilSafety.h"; sourceTree = "<group>"; };
-		377250821DAA4BB900C4A4EF /* NSArray+NilSafety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NilSafety.m"; sourceTree = "<group>"; };
-		377250831DAA4BB900C4A4EF /* NSDictionary+NilSafety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafety.h"; sourceTree = "<group>"; };
-		377250841DAA4BB900C4A4EF /* NSDictionary+NilSafety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafety.m"; sourceTree = "<group>"; };
-		377250851DAA4BB900C4A4EF /* NSNull+NilSafety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+NilSafety.h"; sourceTree = "<group>"; };
-		377250861DAA4BB900C4A4EF /* NSNull+NilSafety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+NilSafety.m"; sourceTree = "<group>"; };
-		377250E21DAB7E8000C4A4EF /* NilSafety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NilSafety.h; sourceTree = "<group>"; };
+		378E695E1DC34DE200C60EFC /* NilSafety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NilSafety.h; path = ARC/NilSafety.h; sourceTree = "<group>"; };
+		378E695F1DC34DE200C60EFC /* NilSafetyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NilSafetyManager.h; sourceTree = "<group>"; };
+		378E69601DC34DE200C60EFC /* NilSafetyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NilSafetyManager.m; sourceTree = "<group>"; };
+		378E69611DC34DE200C60EFC /* NSArray+NilSafety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NilSafety.h"; sourceTree = "<group>"; };
+		378E69621DC34DE200C60EFC /* NSArray+NilSafety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NilSafety.m"; sourceTree = "<group>"; };
+		378E69631DC34DE200C60EFC /* NSDictionary+NilSafety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafety.h"; sourceTree = "<group>"; };
+		378E69641DC34DE200C60EFC /* NSDictionary+NilSafety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafety.m"; sourceTree = "<group>"; };
+		378E69651DC34DE200C60EFC /* NSNull+NilSafety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+NilSafety.h"; sourceTree = "<group>"; };
+		378E69661DC34DE200C60EFC /* NSNull+NilSafety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+NilSafety.m"; sourceTree = "<group>"; };
+		378E69701DC34DF100C60EFC /* NSArray+NilSafetyMRC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NilSafetyMRC.h"; sourceTree = "<group>"; };
+		378E69711DC34DF100C60EFC /* NSArray+NilSafetyMRC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NilSafetyMRC.m"; sourceTree = "<group>"; };
 		74BB2E255815EC27D0107386 /* Pods-NilSafety.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NilSafety.release.xcconfig"; path = "Pods/Target Support Files/Pods-NilSafety/Pods-NilSafety.release.xcconfig"; sourceTree = "<group>"; };
 		F30064151305E890841CF038 /* Pods-NilSafety.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NilSafety.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NilSafety/Pods-NilSafety.debug.xcconfig"; sourceTree = "<group>"; };
 		F52AEE2077A18E4E3F26DCE9 /* libPods-NilSafety.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NilSafety.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +92,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		374A8DE71DC7167E000B68D0 /* ARC */ = {
+			isa = PBXGroup;
+			children = (
+				378E695F1DC34DE200C60EFC /* NilSafetyManager.h */,
+				378E69601DC34DE200C60EFC /* NilSafetyManager.m */,
+				378E69651DC34DE200C60EFC /* NSNull+NilSafety.h */,
+				378E69661DC34DE200C60EFC /* NSNull+NilSafety.m */,
+				378E69611DC34DE200C60EFC /* NSArray+NilSafety.h */,
+				378E69621DC34DE200C60EFC /* NSArray+NilSafety.m */,
+				378E69631DC34DE200C60EFC /* NSDictionary+NilSafety.h */,
+				378E69641DC34DE200C60EFC /* NSDictionary+NilSafety.m */,
+			);
+			path = ARC;
+			sourceTree = "<group>";
+		};
+		374A8DE81DC71683000B68D0 /* MRC */ = {
+			isa = PBXGroup;
+			children = (
+				378E69701DC34DF100C60EFC /* NSArray+NilSafetyMRC.h */,
+				378E69711DC34DF100C60EFC /* NSArray+NilSafetyMRC.m */,
+			);
+			path = MRC;
+			sourceTree = "<group>";
+		};
 		3772505B1DAA4B5300C4A4EF = {
 			isa = PBXGroup;
 			children = (
@@ -111,14 +139,8 @@
 		377250671DAA4B5300C4A4EF /* NilSafety */ = {
 			isa = PBXGroup;
 			children = (
-				3772507F1DAA4BB900C4A4EF /* NilSafetyManager.h */,
-				377250801DAA4BB900C4A4EF /* NilSafetyManager.m */,
-				377250851DAA4BB900C4A4EF /* NSNull+NilSafety.h */,
-				377250861DAA4BB900C4A4EF /* NSNull+NilSafety.m */,
-				377250811DAA4BB900C4A4EF /* NSArray+NilSafety.h */,
-				377250821DAA4BB900C4A4EF /* NSArray+NilSafety.m */,
-				377250831DAA4BB900C4A4EF /* NSDictionary+NilSafety.h */,
-				377250841DAA4BB900C4A4EF /* NSDictionary+NilSafety.m */,
+				374A8DE71DC7167E000B68D0 /* ARC */,
+				374A8DE81DC71683000B68D0 /* MRC */,
 				377250B71DAB272800C4A4EF /* Supporting Files */,
 			);
 			path = NilSafety;
@@ -136,7 +158,7 @@
 		377250B71DAB272800C4A4EF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				377250E21DAB7E8000C4A4EF /* NilSafety.h */,
+				378E695E1DC34DE200C60EFC /* NilSafety.h */,
 				377250691DAA4B5300C4A4EF /* NilSafety-Info.plist */,
 			);
 			name = "Supporting Files";
@@ -149,11 +171,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3772508B1DAA4BB900C4A4EF /* NSDictionary+NilSafety.h in Headers */,
-				3772508D1DAA4BB900C4A4EF /* NSNull+NilSafety.h in Headers */,
-				377250E31DAB7E8000C4A4EF /* NilSafety.h in Headers */,
-				377250891DAA4BB900C4A4EF /* NSArray+NilSafety.h in Headers */,
-				377250871DAA4BB900C4A4EF /* NilSafetyManager.h in Headers */,
+				378E696E1DC34DE200C60EFC /* NSNull+NilSafety.h in Headers */,
+				378E69681DC34DE200C60EFC /* NilSafetyManager.h in Headers */,
+				378E696A1DC34DE200C60EFC /* NSArray+NilSafety.h in Headers */,
+				378E69671DC34DE200C60EFC /* NilSafety.h in Headers */,
+				378E69721DC34DF100C60EFC /* NSArray+NilSafetyMRC.h in Headers */,
+				378E696C1DC34DE200C60EFC /* NSDictionary+NilSafety.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3772508E1DAA4BB900C4A4EF /* NSNull+NilSafety.m in Sources */,
-				377250881DAA4BB900C4A4EF /* NilSafetyManager.m in Sources */,
-				3772508C1DAA4BB900C4A4EF /* NSDictionary+NilSafety.m in Sources */,
-				3772508A1DAA4BB900C4A4EF /* NSArray+NilSafety.m in Sources */,
+				378E696B1DC34DE200C60EFC /* NSArray+NilSafety.m in Sources */,
+				378E69691DC34DE200C60EFC /* NilSafetyManager.m in Sources */,
+				378E69731DC34DF100C60EFC /* NSArray+NilSafetyMRC.m in Sources */,
+				378E696D1DC34DE200C60EFC /* NSDictionary+NilSafety.m in Sources */,
+				378E696F1DC34DE200C60EFC /* NSNull+NilSafety.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

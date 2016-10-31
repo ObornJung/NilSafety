@@ -11,23 +11,17 @@
 #import "NilSafetyManager.h"
 #import "NSArray+NilSafety.h"
 
-static inline BOOL IOS_9_OR_LATER() {
-    return ([[[UIDevice currentDevice] systemVersion] compare:@"9.0" options:NSNumericSearch] != NSOrderedAscending);
-}
-
 @implementation NSArray (NilSafety)
 
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        if (IOS_9_OR_LATER()) {
-            Class clsI = NSClassFromString(@"__NSArrayI");
-            [clsI sm_swizzleMethod:@selector(objectAtIndex:)
-                       withMethod:@selector(ns_objectAtIndex:)];
-        }
+        Class clsI = NSClassFromString(@"__NSArrayI");
+        [clsI sm_swizzleMethod:@selector(objectAtIndex:)
+                    withMethod:@selector(ns_objectAtIndex:)];
         Class clsP = NSClassFromString(@"__NSPlaceholderArray");
         [clsP sm_swizzleMethod:@selector(initWithObjects:count:)
-                   withMethod:@selector(ns_initWithObjects:count:)];
+                    withMethod:@selector(ns_initWithObjects:count:)];
         [self sm_swizzleClassMethod:@selector(arrayWithObjects:count:)
                          withMethod:@selector(ns_arrayWithObjects:count:)];
         
@@ -51,6 +45,16 @@ static inline BOOL IOS_9_OR_LATER() {
     }
 }
 
+- (id)ns_objectAtIndex:(NSUInteger)index {
+    if ([NilSafetyManager sharedInstance].nilSafeOn) {
+        if (index >= self.count) {
+            // nothing to do
+            return nil;
+        }
+    }
+    return [self ns_objectAtIndex:index];
+}
+
 - (instancetype)ns_initWithObjects:(const id [])objects count:(NSUInteger)cnt {
     if ([NilSafetyManager sharedInstance].nilSafeOn) {
         id safeObjects[cnt];
@@ -68,16 +72,6 @@ static inline BOOL IOS_9_OR_LATER() {
     }
 }
 
-- (id)ns_objectAtIndex:(NSUInteger)index {
-    if ([NilSafetyManager sharedInstance].nilSafeOn) {
-        if (index >= self.count) {
-            // nothing to do
-            return nil;
-        }
-    }
-    return [self ns_objectAtIndex:index];
-}
-
 @end
 
 @implementation NSMutableArray (NilSafety)
@@ -86,11 +80,6 @@ static inline BOOL IOS_9_OR_LATER() {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class arrayCls = NSClassFromString(@"__NSArrayM");
-        if (IOS_9_OR_LATER()) {
-            [arrayCls sm_swizzleMethod:@selector(objectAtIndex:)
-                            withMethod:@selector(ns_objectAtIndex:)];
-        }
-        
         [arrayCls sm_swizzleMethod:@selector(removeObjectAtIndex:)
                         withMethod:@selector(ns_removeObjectAtIndex:)];
         [arrayCls sm_swizzleMethod:@selector(insertObject:atIndex:)
@@ -100,16 +89,6 @@ static inline BOOL IOS_9_OR_LATER() {
         [arrayCls sm_swizzleMethod:@selector(replaceObjectAtIndex:withObject:)
                         withMethod:@selector(ns_replaceObjectAtIndex:withObject:)];
     });
-}
-
-- (id)ns_objectAtIndex:(NSUInteger)index {
-    if ([NilSafetyManager sharedInstance].nilSafeOn) {
-        if (index >= self.count) {
-            // nothing to do
-            return nil;
-        }
-    }
-    return [self ns_objectAtIndex:index];
 }
 
 - (void)ns_insertObject:(id)anObject atIndex:(NSUInteger)index {
