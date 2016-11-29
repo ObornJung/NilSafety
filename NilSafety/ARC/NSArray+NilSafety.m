@@ -85,8 +85,8 @@
         [arrayCls sm_swizzleMethod:@selector(insertObject:atIndex:)
                         withMethod:@selector(ns_insertObject:atIndex:)];
         [arrayCls sm_swizzleMethod:@selector(setObject:atIndexedSubscript:)
-                        withMethod:@selector(ns_setObject:atIndexedSubscript:)];
-        [arrayCls sm_swizzleMethod:@selector(replaceObjectAtIndex:withObject:)
+//                        withMethod:@selector(ns_setObject:atIndexedSubscript:)];
+//        [arrayCls sm_swizzleMethod:@selector(replaceObjectAtIndex:withObject:)
                         withMethod:@selector(ns_replaceObjectAtIndex:withObject:)];
     });
 }
