@@ -10,10 +10,12 @@
 #import "NSObject+swizzle.h"
 #import "NilSafetyManager.h"
 #import "NSArray+NilSafety.h"
+#import "NilSafety+Private.h"
 
 @implementation NSMutableArray (NilSafetyMRC)
 
 + (void)load {
+    NIL_SAFETY_SW();
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class arrayCls = NSClassFromString(@"__NSArrayM");

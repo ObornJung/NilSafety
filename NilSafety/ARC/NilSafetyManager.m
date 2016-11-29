@@ -7,6 +7,9 @@
 //
 
 #import "NilSafetyManager.h"
+#import "NilSafety+Private.h"
+
+NSString * const kNilSafeSWKey = @"NilSafeSWKey";
 
 @implementation NilSafetyManager
 
@@ -37,6 +40,7 @@
     } else {
         _nilSafeOn = arc4random_uniform(100) < odds * 100;
     }
+    [[NSUserDefaults standardUserDefaults] setObject:@(_nilSafeOn) forKey:kNilSafeSWKey];
 }
 
 @end

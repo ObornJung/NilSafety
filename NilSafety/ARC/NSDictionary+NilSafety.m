@@ -10,10 +10,12 @@
 #import "NSObject+swizzle.h"
 #import "NilSafetyManager.h"
 #import "NSDictionary+NilSafety.h"
+#import "NilSafety+Private.h"
 
 @implementation NSDictionary (NilSafety)
 
 + (void)load {
+    NIL_SAFETY_SW();
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class cls = NSClassFromString(@"__NSPlaceholderDictionary");
@@ -79,6 +81,7 @@
 @implementation NSMutableDictionary (NilSafe)
 
 + (void)load {
+    NIL_SAFETY_SW();
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class class = NSClassFromString(@"__NSDictionaryM");

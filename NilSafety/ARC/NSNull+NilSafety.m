@@ -10,10 +10,12 @@
 #import "NSObject+swizzle.h"
 #import "NilSafetyManager.h"
 #import "NSNull+NilSafety.h"
+#import "NilSafety+Private.h"
 
 @implementation NSNull (NilSafety)
 
 + (void)load {
+    NIL_SAFETY_SW();
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self sm_swizzleMethod:@selector(methodSignatureForSelector:)

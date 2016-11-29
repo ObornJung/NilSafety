@@ -20,6 +20,7 @@
 		378E696F1DC34DE200C60EFC /* NSNull+NilSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E69661DC34DE200C60EFC /* NSNull+NilSafety.m */; };
 		378E69721DC34DF100C60EFC /* NSArray+NilSafetyMRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 378E69701DC34DF100C60EFC /* NSArray+NilSafetyMRC.h */; };
 		378E69731DC34DF100C60EFC /* NSArray+NilSafetyMRC.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E69711DC34DF100C60EFC /* NSArray+NilSafetyMRC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		37DA55341DED396000FB283D /* NilSafety+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DA55331DED396000FB283D /* NilSafety+Private.h */; };
 		57D32453210C69607AC5D237 /* libPods-NilSafety.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F52AEE2077A18E4E3F26DCE9 /* libPods-NilSafety.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		378E69661DC34DE200C60EFC /* NSNull+NilSafety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+NilSafety.m"; sourceTree = "<group>"; };
 		378E69701DC34DF100C60EFC /* NSArray+NilSafetyMRC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NilSafetyMRC.h"; sourceTree = "<group>"; };
 		378E69711DC34DF100C60EFC /* NSArray+NilSafetyMRC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NilSafetyMRC.m"; sourceTree = "<group>"; };
+		37DA55331DED396000FB283D /* NilSafety+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NilSafety+Private.h"; sourceTree = "<group>"; };
 		74BB2E255815EC27D0107386 /* Pods-NilSafety.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NilSafety.release.xcconfig"; path = "Pods/Target Support Files/Pods-NilSafety/Pods-NilSafety.release.xcconfig"; sourceTree = "<group>"; };
 		F30064151305E890841CF038 /* Pods-NilSafety.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NilSafety.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NilSafety/Pods-NilSafety.debug.xcconfig"; sourceTree = "<group>"; };
 		F52AEE2077A18E4E3F26DCE9 /* libPods-NilSafety.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NilSafety.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 		377250671DAA4B5300C4A4EF /* NilSafety */ = {
 			isa = PBXGroup;
 			children = (
+				37DA55331DED396000FB283D /* NilSafety+Private.h */,
 				374A8DE71DC7167E000B68D0 /* ARC */,
 				374A8DE81DC71683000B68D0 /* MRC */,
 				377250B71DAB272800C4A4EF /* Supporting Files */,
@@ -174,6 +177,7 @@
 				378E696E1DC34DE200C60EFC /* NSNull+NilSafety.h in Headers */,
 				378E69681DC34DE200C60EFC /* NilSafetyManager.h in Headers */,
 				378E696A1DC34DE200C60EFC /* NSArray+NilSafety.h in Headers */,
+				37DA55341DED396000FB283D /* NilSafety+Private.h in Headers */,
 				378E69671DC34DE200C60EFC /* NilSafety.h in Headers */,
 				378E69721DC34DF100C60EFC /* NSArray+NilSafetyMRC.h in Headers */,
 				378E696C1DC34DE200C60EFC /* NSDictionary+NilSafety.h in Headers */,

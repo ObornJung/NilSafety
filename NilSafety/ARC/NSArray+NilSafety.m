@@ -10,10 +10,12 @@
 #import "NSObject+swizzle.h"
 #import "NilSafetyManager.h"
 #import "NSArray+NilSafety.h"
+#import "NilSafety+Private.h"
 
 @implementation NSArray (NilSafety)
 
 + (void)load {
+    NIL_SAFETY_SW();
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class clsI = NSClassFromString(@"__NSArrayI");
@@ -77,7 +79,9 @@
 @implementation NSMutableArray (NilSafety)
 
 + (void)load {
+    NIL_SAFETY_SW();
     static dispatch_once_t onceToken;
+    [[NSUserDefaults standardUserDefaults] objectForKey:@""];
     dispatch_once(&onceToken, ^{
         Class arrayCls = NSClassFromString(@"__NSArrayM");
         [arrayCls sm_swizzleMethod:@selector(removeObjectAtIndex:)
